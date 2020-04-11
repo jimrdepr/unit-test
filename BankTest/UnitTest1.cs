@@ -136,6 +136,10 @@ namespace BankTest
             BankAccount account = new BankAccount("Mr. Bryan Walton", beginningBalance);
 
             account.Credit(creditAmount);
+
+            double expected = 111.99;
+            double actual = account.Balance;
+            Assert.AreEqual(expected, actual, 0.001, "Account not credited correctly");
         }
     }
 }
